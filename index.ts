@@ -1,7 +1,7 @@
 import { defineCustomElements } from '@ionic/core/loader';
 
 import { loadingController, modalController, pickerController, toastController } from '@ionic/core';
-
+import { Browser } from '@capacitor/browser';
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/core/css/core.css';
 
