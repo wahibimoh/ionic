@@ -1,0 +1,71 @@
+<html>
+
+<head>
+
+
+  <script>
+    window.Ionic = {
+      config: {
+        mode: 'ios'
+      }
+    }
+  </script>
+
+
+<style type="text/css" media="screen">
+  iframe {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      border: none;
+  }
+</style>
+
+
+</head>
+
+<body>
+  <ion-app>
+    <ion-header>
+  <ion-toolbar>
+    <ion-segment value="all">
+      <ion-segment-button value="all">
+        All
+      </ion-segment-button>
+      <ion-segment-button value="favorites">
+        Favorites
+      </ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
+  <ion-searchbar animated="true"></ion-searchbar>
+</ion-header>
+
+<iframe src="https://shaf.odoo.com" scrolling="no"></iframe>
+
+
+<ion-tab-bar slot="bottom">
+  <ion-tab-button tab="music">
+    <ion-icon name="home"></ion-icon>
+  </ion-tab-button>
+  <ion-tab-button tab="movies">
+    <ion-icon name="stats-chart"></ion-icon>
+  </ion-tab-button>
+  <ion-tab-button tab="games">
+    <ion-icon name="file-tray-stacked"></ion-icon>
+  </ion-tab-button>
+  <ion-tab-button tab="cal">
+    <ion-icon name="calendar"></ion-icon>
+  </ion-tab-button>
+  <ion-tab-button tab="sit">
+    <ion-icon name="build"></ion-icon>
+  </ion-tab-button>
+</ion-tab-bar>
+
+
+
+  </ion-app>
+
+
+</body>
+
+</html>
