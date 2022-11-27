@@ -27,3 +27,4 @@ defineCustomElements();
 (window as any).modalController = modalController;
 (window as any).pickerController = pickerController;
 (window as any).toastController = toastController;
+console.log("hiiiiiiii")
