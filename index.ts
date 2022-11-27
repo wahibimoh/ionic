@@ -28,3 +28,7 @@ defineCustomElements();
 (window as any).pickerController = pickerController;
 (window as any).toastController = toastController;
 console.log("hiiiiiiii")
+
+export async function brows(){
+  console.log("222")
+}
