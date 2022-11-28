@@ -2,7 +2,10 @@
 
 <head>
 
-  <meta http-equiv="Content-Security-Policy" content="font-src 'self' data:; img-src * data:; default-src * 'unsafe-eval' 'unsafe-inline'">
+  <!--meta http-equiv="Content-Security-Policy" content="font-src 'self' data:; img-src * data:; default-src * 'unsafe-eval' 'unsafe-inline'" 
+  
+        allow="accelerometer *; ambient-light-sensor *; autoplay *; camera *; clipboard-read *; clipboard-write *; encrypted-media *; fullscreen *; geolocation *; gyroscope *; magnetometer *; microphone *; midi *; payment *; picture-in-picture *; screen-wake-lock *; speaker *; sync-xhr *; usb *; web-share *; vibrate *; vr *" sandbox="allow-downloads allow-forms allow-modals allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts" scrolling="no"
+  -->
 
   <script>
     window.Ionic = {
@@ -26,41 +29,78 @@
 
 <body>
   <ion-app>
-    <ion-header>
-  <ion-toolbar>
-    <ion-segment value="all">
-      <ion-segment-button value="all">
-        All
-      </ion-segment-button>
-      <ion-segment-button value="favorites">
-        Favorites
-      </ion-segment-button>
-    </ion-segment>
-  </ion-toolbar>
-  <ion-searchbar animated="true"></ion-searchbar>
-</ion-header>
 
-<iframe allow="accelerometer *; ambient-light-sensor *; autoplay *; camera *; clipboard-read *; clipboard-write *; encrypted-media *; fullscreen *; geolocation *; gyroscope *; magnetometer *; microphone *; midi *; payment *; picture-in-picture *; screen-wake-lock *; speaker *; sync-xhr *; usb *; web-share *; vibrate *; vr *" sandbox="allow-downloads allow-forms allow-modals allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts" src="https://shaf.odoo.com" scrolling="no"></iframe>
 
+
+
+
+<ion-tabs>
+
+  <ion-tab tab="home">
+    <ion-nav>
+      <iframe allow="accelerometer *; ambient-light-sensor *; autoplay *; camera *; clipboard-read *; clipboard-write *; encrypted-media *; fullscreen *; geolocation *; gyroscope *; magnetometer *; microphone *; midi *; payment *; picture-in-picture *; screen-wake-lock *; speaker *; sync-xhr *; usb *; web-share *; vibrate *; vr *" sandbox="allow-downloads allow-forms allow-modals allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts" scrolling="no"
+      src="https://shaf.odoo.com" ></iframe>
+    </ion-nav>
+  </ion-tab>
+
+  <ion-tab tab="stats">
+    <ion-nav>
+      <iframe allow="accelerometer *; ambient-light-sensor *; autoplay *; camera *; clipboard-read *; clipboard-write *; encrypted-media *; fullscreen *; geolocation *; gyroscope *; magnetometer *; microphone *; midi *; payment *; picture-in-picture *; screen-wake-lock *; speaker *; sync-xhr *; usb *; web-share *; vibrate *; vr *" sandbox="allow-downloads allow-forms allow-modals allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts" scrolling="no"
+      src="https://shaf.odoo.com/report" ></iframe>
+    </ion-nav>
+  </ion-tab>
+
+  <ion-tab tab="files" component="page-map">
+    <ion-nav>
+      <ion-header>
+        <ion-toolbar>
+          <ion-segment value="all">
+            <ion-segment-button value="all">
+              All
+            </ion-segment-button>
+            <ion-segment-button value="favorites">
+              Favorites
+            </ion-segment-button>
+          </ion-segment>
+        </ion-toolbar>
+        <ion-searchbar animated="true"></ion-searchbar>
+      </ion-header>
+
+    </ion-nav>
+  </ion-tab>
+
+  <ion-tab tab="cal" component="page-about">
+    <ion-nav>
+      <iframe allow="accelerometer *; ambient-light-sensor *; autoplay *; camera *; clipboard-read *; clipboard-write *; encrypted-media *; fullscreen *; geolocation *; gyroscope *; magnetometer *; microphone *; midi *; payment *; picture-in-picture *; screen-wake-lock *; speaker *; sync-xhr *; usb *; web-share *; vibrate *; vr *" sandbox="allow-downloads allow-forms allow-modals allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts" scrolling="no"
+      src="https://shaf.odoo.com/appointment" ></iframe>
+    </ion-nav>
+  </ion-tab>
+
+  <ion-tab tab="sitting">
+    <ion-nav>
+      <iframe 
+      src="https://shaf.odoo.com/my/home" ></iframe>
+    </ion-nav>
+  </ion-tab>
 
 <ion-tab-bar slot="bottom">
-  <ion-tab-button tab="music">
+  <ion-tab-button tab="home">
     <ion-icon name="home"></ion-icon>
   </ion-tab-button>
-  <ion-tab-button tab="movies">
+  <ion-tab-button tab="stats">
     <ion-icon name="stats-chart"></ion-icon>
   </ion-tab-button>
-  <ion-tab-button tab="games">
+  <ion-tab-button tab="files">
     <ion-icon name="file-tray-stacked"></ion-icon>
   </ion-tab-button>
   <ion-tab-button tab="cal">
     <ion-icon name="calendar"></ion-icon>
   </ion-tab-button>
-  <ion-tab-button tab="sit">
+  <ion-tab-button tab="sitting">
     <ion-icon name="build"></ion-icon>
   </ion-tab-button>
 </ion-tab-bar>
-
+</ion-tabs>
 
 
   </ion-app>
